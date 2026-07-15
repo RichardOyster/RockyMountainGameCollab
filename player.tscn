@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://cl5ubspkypc0x"]
+
+[node name="Player" type="CharacterBody3D" unique_id=1040764405]
+
+[node name="Boxy" type="Node3D" parent="." unique_id=1284030543]
+
+[node name="Playerbox" type="CSGBox3D" parent="Boxy" unique_id=1768426798]
