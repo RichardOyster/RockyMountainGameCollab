@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://c4kumfgt4nymf"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_yf5fn"]
+albedo_color = Color(0.30586198, 0.21391606, 0.09372864, 1)
+
+[sub_resource type="SphereMesh" id="SphereMesh_g4v7s"]
+material = SubResource("StandardMaterial3D_yf5fn")
+
+[node name="BoneGrave" type="Node3D" unique_id=1436268548]
+
+[node name="Mound" type="StaticBody3D" parent="." unique_id=1139953854]
+
+[node name="MoundPlaceholder" type="MeshInstance3D" parent="." unique_id=200501224]
+mesh = SubResource("SphereMesh_g4v7s")

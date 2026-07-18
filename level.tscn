@@ -1,5 +1,7 @@
 [gd_scene format=3 uid="uid://cua0spqwrokoo"]
 
+[ext_resource type="PackedScene" uid="uid://b0ent6ltmj1ju" path="res://Pixeltree.glb" id="1_u52ul"]
+
 [sub_resource type="BoxShape3D" id="BoxShape3D_g4v7s"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_g4v7s"]
@@ -9,6 +11,12 @@ albedo_color = Color(0.95472735, 0, 0.21381047, 1)
 
 [sub_resource type="BoxMesh" id="BoxMesh_yf5fn"]
 material = SubResource("StandardMaterial3D_57qmd")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_yf5fn"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_57qmd"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_g4v7s"]
 
 [node name="Level" type="Node" unique_id=234740822]
 
@@ -25,3 +33,165 @@ mesh = SubResource("BoxMesh_g4v7s")
 [node name="Placeholder" type="MeshInstance3D" parent="." unique_id=620350907]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.4, 0)
 mesh = SubResource("BoxMesh_yf5fn")
+
+[node name="Wall1" type="StaticBody3D" parent="." unique_id=2107908629]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -129.40001)
+
+[node name="Wall1Collision" type="CollisionShape3D" parent="Wall1" unique_id=1888764420]
+transform = Transform3D(261.7244, 0, 0, 0, 67.200005, 0, 0, 0, 1, 0, 32.8, 1.5)
+shape = SubResource("BoxShape3D_yf5fn")
+
+[node name="Wallmesh" type="MeshInstance3D" parent="Wall1" unique_id=1575036730]
+transform = Transform3D(251.71204, 0, 0, 0, 50.895, 0, 0, 0, 1, 0, 24.4, 0.8999939)
+mesh = SubResource("BoxMesh_57qmd")
+
+[node name="Wall2" type="StaticBody3D" parent="." unique_id=1411336440]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 126.999985)
+
+[node name="Wall2Collision" type="CollisionShape3D" parent="Wall2" unique_id=603306925]
+transform = Transform3D(261.7244, 0, 0, 0, 67.200005, 0, 0, 0, 1, 0, 32.8, 0.7999954)
+shape = SubResource("BoxShape3D_yf5fn")
+
+[node name="Wallmesh2" type="MeshInstance3D" parent="Wall2" unique_id=863468277]
+transform = Transform3D(251.71204, 0, 0, 0, 50.895, 0, 0, 0, 1, 0, 24.4, 0.8999939)
+mesh = SubResource("BoxMesh_57qmd")
+
+[node name="Wall3" type="StaticBody3D" parent="." unique_id=1311364698]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 124.2, 0, 1.6999817)
+
+[node name="Wall3Collision" type="CollisionShape3D" parent="Wall3" unique_id=1817084068]
+transform = Transform3D(287.89685, 0, 0, 0, 67.200005, 0, 0, 0, 1, 0, 32.8, 0.7999954)
+shape = SubResource("BoxShape3D_yf5fn")
+
+[node name="Wallmesh3" type="MeshInstance3D" parent="Wall3" unique_id=924950548]
+transform = Transform3D(276.88324, 0, 0, 0, 50.895, 0, 0, 0, 1, 0, 24.4, 0.8999939)
+mesh = SubResource("BoxMesh_57qmd")
+
+[node name="Wall4" type="StaticBody3D" parent="." unique_id=1262793696]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -124.30001, 0, 1.6999817)
+
+[node name="Wall4Collision" type="CollisionShape3D" parent="Wall4" unique_id=1742457]
+transform = Transform3D(287.89685, 0, 0, 0, 67.200005, 0, 0, 0, 1, 0, 32.8, 0.7999954)
+shape = SubResource("BoxShape3D_yf5fn")
+
+[node name="Wallmesh4" type="MeshInstance3D" parent="Wall4" unique_id=1422411851]
+transform = Transform3D(276.88324, 0, 0, 0, 50.895, 0, 0, 0, 1, 0, 24.4, 0.8999939)
+mesh = SubResource("BoxMesh_57qmd")
+
+[node name="Tree1" type="StaticBody3D" parent="." unique_id=1890721837]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -79.200005, 0, 96.6)
+
+[node name="Treecollision1" type="CollisionShape3D" parent="Tree1" unique_id=295767268]
+transform = Transform3D(5.1, 0, 0, 0, 24.518002, 0, 0, 0, 5.76, 0, 24.199999, 0)
+shape = SubResource("CylinderShape3D_g4v7s")
+
+[node name="Pixeltree1" parent="Tree1" unique_id=1329568023 instance=ExtResource("1_u52ul")]
+
+[node name="Tree2" type="StaticBody3D" parent="." unique_id=2065079267]
+transform = Transform3D(-0.34202012, 0, 0.9396926, 0, 1, 0, -0.9396926, 0, -0.34202012, -99.90001, 0, 78.399994)
+
+[node name="Treecollision2" type="CollisionShape3D" parent="Tree2" unique_id=556263881]
+transform = Transform3D(5.1, 0, 0, 0, 24.518002, 0, 0, 0, 5.76, 0, 24.199999, 0)
+shape = SubResource("CylinderShape3D_g4v7s")
+
+[node name="Pixeltree2" parent="Tree2" unique_id=4802324 instance=ExtResource("1_u52ul")]
+
+[node name="Tree3" type="StaticBody3D" parent="." unique_id=705911997]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -102.100006, 0, 104.1)
+
+[node name="Treecollision3" type="CollisionShape3D" parent="Tree3" unique_id=263232340]
+transform = Transform3D(5.1, 0, 0, 0, 24.518002, 0, 0, 0, 5.76, 0, 24.199999, 0)
+shape = SubResource("CylinderShape3D_g4v7s")
+
+[node name="Pixeltree3" parent="Tree3" unique_id=2066801384 instance=ExtResource("1_u52ul")]
+
+[node name="Tree4" type="StaticBody3D" parent="." unique_id=1188915619]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -46.300003, 0, -38.6)
+
+[node name="Treecollision4" type="CollisionShape3D" parent="Tree4" unique_id=661039871]
+transform = Transform3D(5.1, 0, 0, 0, 24.518002, 0, 0, 0, 5.76, 0, 24.199999, 0)
+shape = SubResource("CylinderShape3D_g4v7s")
+
+[node name="Pixeltree" parent="Tree4" unique_id=1382947096 instance=ExtResource("1_u52ul")]
+
+[node name="Tree5" type="StaticBody3D" parent="." unique_id=1019311118]
+transform = Transform3D(0.17364822, 0, 0.9848077, 0, 1, 0, -0.9848077, 0, 0.17364822, 80.6, 0, 79.6)
+
+[node name="Treecollision5" type="CollisionShape3D" parent="Tree5" unique_id=275787786]
+transform = Transform3D(5.1, 0, 0, 0, 24.518002, 0, 0, 0, 5.76, 0, 24.199999, 0)
+shape = SubResource("CylinderShape3D_g4v7s")
+
+[node name="Pixeltree5" parent="Tree5" unique_id=700430692 instance=ExtResource("1_u52ul")]
+
+[node name="Tree6" type="StaticBody3D" parent="." unique_id=203303727]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 28.999996, 0, -19.300007)
+
+[node name="Treecollision6" type="CollisionShape3D" parent="Tree6" unique_id=338983542]
+transform = Transform3D(5.1, 0, 0, 0, 24.518002, 0, 0, 0, 5.76, 0, 24.199999, 0)
+shape = SubResource("CylinderShape3D_g4v7s")
+
+[node name="Pixeltree6" parent="Tree6" unique_id=1848908782 instance=ExtResource("1_u52ul")]
+
+[node name="Tree7" type="StaticBody3D" parent="." unique_id=1813396781]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 64.700005, 0, 105.9)
+
+[node name="Treecollision7" type="CollisionShape3D" parent="Tree7" unique_id=1767911847]
+transform = Transform3D(5.1, 0, 0, 0, 24.518002, 0, 0, 0, 5.76, 0, 24.199999, 0)
+shape = SubResource("CylinderShape3D_g4v7s")
+
+[node name="Pixeltree7" parent="Tree7" unique_id=774935639 instance=ExtResource("1_u52ul")]
+
+[node name="Tree8" type="StaticBody3D" parent="." unique_id=103389327]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -92.9, 0, -106.80001)
+
+[node name="Treecollision8" type="CollisionShape3D" parent="Tree8" unique_id=974909062]
+transform = Transform3D(5.1, 0, 0, 0, 24.518002, 0, 0, 0, 5.76, 0, 24.199999, 0)
+shape = SubResource("CylinderShape3D_g4v7s")
+
+[node name="Pixeltree8" parent="Tree8" unique_id=1770393668 instance=ExtResource("1_u52ul")]
+
+[node name="Tree9" type="StaticBody3D" parent="." unique_id=249973662]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 92.700005, 0, -100.700005)
+
+[node name="Treecollision9" type="CollisionShape3D" parent="Tree9" unique_id=1995201194]
+transform = Transform3D(5.1, 0, 0, 0, 24.518002, 0, 0, 0, 5.76, 0, 24.199999, 0)
+shape = SubResource("CylinderShape3D_g4v7s")
+
+[node name="Pixeltree9" parent="Tree9" unique_id=1406044799 instance=ExtResource("1_u52ul")]
+
+[node name="Tree10" type="StaticBody3D" parent="." unique_id=442437943]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.899994, 0, -111.200005)
+
+[node name="Treecollision10" type="CollisionShape3D" parent="Tree10" unique_id=1666706602]
+transform = Transform3D(5.1, 0, 0, 0, 24.518002, 0, 0, 0, 5.76, 0, 24.199999, 0)
+shape = SubResource("CylinderShape3D_g4v7s")
+
+[node name="Pixeltree10" parent="Tree10" unique_id=1284621505 instance=ExtResource("1_u52ul")]
+
+[node name="Tree11" type="StaticBody3D" parent="." unique_id=856471096]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 53.499992, 0, -92.200005)
+
+[node name="Treecollision11" type="CollisionShape3D" parent="Tree11" unique_id=1184517192]
+transform = Transform3D(5.1, 0, 0, 0, 24.518002, 0, 0, 0, 5.76, 0, 24.199999, 0)
+shape = SubResource("CylinderShape3D_g4v7s")
+
+[node name="Pixeltree11" parent="Tree11" unique_id=1498981028 instance=ExtResource("1_u52ul")]
+
+[node name="Tree12" type="StaticBody3D" parent="." unique_id=1589793291]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -62.30001, 0, -100.700005)
+
+[node name="Treecollision12" type="CollisionShape3D" parent="Tree12" unique_id=1678386710]
+transform = Transform3D(5.1, 0, 0, 0, 24.518002, 0, 0, 0, 5.76, 0, 24.199999, 0)
+shape = SubResource("CylinderShape3D_g4v7s")
+
+[node name="Pixeltree12" parent="Tree12" unique_id=268598477 instance=ExtResource("1_u52ul")]
+
+[node name="Tree13" type="StaticBody3D" parent="." unique_id=1329204072]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 53.499992, 0, -92.200005)
+
+[node name="Treecollision13" type="CollisionShape3D" parent="Tree13" unique_id=2061680888]
+transform = Transform3D(5.1, 0, 0, 0, 24.518002, 0, 0, 0, 5.76, 0, 24.199999, 0)
+shape = SubResource("CylinderShape3D_g4v7s")
+
+[node name="Pixeltree13" parent="Tree13" unique_id=598597730 instance=ExtResource("1_u52ul")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 51.6, 0, 103.200005)

@@ -1,3 +1,14 @@
 [gd_scene format=3 uid="uid://cawxx7pjkpr1n"]
 
+[ext_resource type="PackedScene" uid="uid://cua0spqwrokoo" path="res://level.tscn" id="1_0xm2m"]
+[ext_resource type="PackedScene" uid="uid://cl5ubspkypc0x" path="res://player.tscn" id="2_0xm2m"]
+[ext_resource type="PackedScene" uid="uid://b3b6j725j8kby" path="res://ritual_site.tscn" id="3_h2yge"]
+
 [node name="Main" type="Node" unique_id=157006384]
+
+[node name="Level" parent="." unique_id=234740822 instance=ExtResource("1_0xm2m")]
+
+[node name="Player" parent="." unique_id=1040764405 instance=ExtResource("2_0xm2m")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -14.900001)
+
+[node name="Ritual Site" parent="." unique_id=186982503 instance=ExtResource("3_h2yge")]

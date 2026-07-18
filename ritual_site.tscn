@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://b3b6j725j8kby"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_yf5fn"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_57qmd"]
+albedo_color = Color(0.60694516, 0.08787369, 9.62615e-08, 1)
+
+[sub_resource type="TorusMesh" id="TorusMesh_yf5fn"]
+material = SubResource("StandardMaterial3D_57qmd")
+
+[node name="Ritual Site" type="Node" unique_id=186982503]
+
+[node name="Site" type="StaticBody3D" parent="." unique_id=1468183238]
+transform = Transform3D(12.370177, 0, 0, 0, 12.043471, 0, 0, 0, 13.267798, 0, 2.1, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Site" unique_id=380111633]
+transform = Transform3D(1.5080761, 0, 0, 0, 0.18254326, 0, 0, 0, 1.2841868, 0, 0, 0)
+shape = SubResource("CylinderShape3D_yf5fn")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1876383201]
+transform = Transform3D(8.9065275, 0, 0, 0, 7.587387, 0, 0, 0, 8.358714, 0, 2.1, 0)
+mesh = SubResource("TorusMesh_yf5fn")

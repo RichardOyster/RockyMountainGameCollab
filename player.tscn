@@ -1,7 +1,16 @@
 [gd_scene format=3 uid="uid://cl5ubspkypc0x"]
 
+[ext_resource type="PackedScene" uid="uid://donpn5j3wxw2t" path="res://PlayerBondigger.glb" id="1_4flbx"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_g4v7s"]
+
 [node name="Player" type="CharacterBody3D" unique_id=1040764405]
 
-[node name="Boxy" type="Node3D" parent="." unique_id=1284030543]
+[node name="Pivot" type="Node3D" parent="." unique_id=87352587]
 
-[node name="Playerbox" type="CSGBox3D" parent="Boxy" unique_id=1768426798]
+[node name="PlayerBondigger" parent="Pivot" unique_id=1530740487 instance=ExtResource("1_4flbx")]
+transform = Transform3D(0.39999998, 0, 0, 0, 0.39999998, 0, 0, 0, 0.3, 0, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=56349808]
+transform = Transform3D(6.194682, 0, 0, 0, 10.53678, 0, 0, 0, 5.9952636, 0, 5.3999996, 0)
+shape = SubResource("BoxShape3D_g4v7s")
