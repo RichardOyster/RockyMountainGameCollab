@@ -1,10 +1,15 @@
 [gd_scene format=3 uid="uid://cl5ubspkypc0x"]
 
 [ext_resource type="PackedScene" uid="uid://donpn5j3wxw2t" path="res://PlayerBondigger.glb" id="1_4flbx"]
+[ext_resource type="Script" uid="uid://uldkmhcysev" path="res://player.gd" id="1_i3pqv"]
+[ext_resource type="Script" uid="uid://dnxawg6b3j08i" path="res://neck.gd" id="2_onrkg"]
+[ext_resource type="PackedScene" uid="uid://k3flltjbs4nb" path="res://interactingcomponent.tscn" id="4_hqtel"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_g4v7s"]
 
 [node name="Player" type="CharacterBody3D" unique_id=1040764405]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
+script = ExtResource("1_i3pqv")
 
 [node name="Pivot" type="Node3D" parent="." unique_id=87352587]
 
@@ -14,3 +19,13 @@ transform = Transform3D(0.39999998, 0, 0, 0, 0.39999998, 0, 0, 0, 0.3, 0, 0, 0)
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=56349808]
 transform = Transform3D(6.194682, 0, 0, 0, 10.53678, 0, 0, 0, 5.9952636, 0, 5.3999996, 0)
 shape = SubResource("BoxShape3D_g4v7s")
+
+[node name="Neck" type="Node3D" parent="." unique_id=578217201]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 8, 2.4705544)
+script = ExtResource("2_onrkg")
+
+[node name="Camera3D" type="Camera3D" parent="Neck" unique_id=1569872207]
+transform = Transform3D(-0.99982375, 0, 0.018772779, 0, 1, 0, -0.018772779, 0, -0.99982375, 0, 0, 0)
+
+[node name="Interactingcomponent" parent="." unique_id=1399623497 instance=ExtResource("4_hqtel")]
+transform = Transform3D(6.191999, 0, 0, 0, -10.6392, 0, 5.684342e-14, 0, 7.866002, 0, 3.9, 0)

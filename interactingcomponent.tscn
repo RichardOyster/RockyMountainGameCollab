@@ -1,0 +1,43 @@
+[gd_scene format=3 uid="uid://k3flltjbs4nb"]
+
+[ext_resource type="FontFile" uid="uid://broqn06afa8er" path="res://October Crow.ttf" id="1_1w3q6"]
+[ext_resource type="Script" uid="uid://cgogd5de2rhve" path="res://interactingcomponent.gd" id="1_xnfax"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_g4v7s"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_ssl8l"]
+font = ExtResource("1_1w3q6")
+outline_size = 5
+outline_color = Color(0, 0, 0, 1)
+
+[node name="Interactingcomponent" type="Node3D" unique_id=1399623497]
+script = ExtResource("1_xnfax")
+
+[node name="InteractRange" type="Area3D" parent="." unique_id=1137964836]
+collision_layer = 0
+collision_mask = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="InteractRange" unique_id=822551501]
+transform = Transform3D(1.7, 0, 0, 0, 1.6, 0, 0, 0, 1.6, 0, 0, 0)
+shape = SubResource("SphereShape3D_g4v7s")
+
+[node name="InteractLabel" type="Label" parent="." unique_id=2010649043]
+z_index = 10
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Press E to Interact..."
+label_settings = SubResource("LabelSettings_ssl8l")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="area_entered" from="InteractRange" to="." method="_on_interact_range_area_entered"]
+[connection signal="area_exited" from="InteractRange" to="." method="_on_interact_range_area_exited"]

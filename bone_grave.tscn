@@ -1,10 +1,14 @@
 [gd_scene format=3 uid="uid://c4kumfgt4nymf"]
 
+[ext_resource type="PackedScene" uid="uid://dn07hmhhnpbmc" path="res://interactable.tscn" id="1_xbo51"]
+
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_yf5fn"]
 albedo_color = Color(0.30586198, 0.21391606, 0.09372864, 1)
 
 [sub_resource type="SphereMesh" id="SphereMesh_g4v7s"]
 material = SubResource("StandardMaterial3D_yf5fn")
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_g4v7s"]
 
 [node name="BoneGrave" type="Node3D" unique_id=1436268548]
 
@@ -12,3 +16,10 @@ material = SubResource("StandardMaterial3D_yf5fn")
 
 [node name="MoundPlaceholder" type="MeshInstance3D" parent="." unique_id=200501224]
 mesh = SubResource("SphereMesh_g4v7s")
+
+[node name="Interactable" parent="." unique_id=416284619 instance=ExtResource("1_xbo51")]
+interact_name = "Dig For Bones"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Interactable" unique_id=134048680]
+transform = Transform3D(1.4, 0, 0, 0, 1.5, 0, 0, 0, 1.4, 0, 0, 0)
+shape = SubResource("SphereShape3D_g4v7s")
