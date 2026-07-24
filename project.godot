@@ -15,6 +15,10 @@ run/main_scene="uid://cawxx7pjkpr1n"
 config/features=PackedStringArray("4.7", "GL Compatibility")
 config/icon="res://icon.svg"
 
+[global_group]
+
+main="Has several functions needed for interactables"
+
 [input]
 
 move_forward={

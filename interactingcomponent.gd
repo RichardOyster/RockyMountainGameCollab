@@ -7,6 +7,10 @@ var current_interactions := []
 var can_interact := true
 #This code calls the interact label and prepares variables for interactions
 
+func _ready() -> void:
+	interact_label.hide()
+# Fix 1: Ensure the label is hidden immediately on start
+
 func _input(event: InputEvent) -> void:
 	if event.is_action_pressed("interact") and can_interact:
 		if current_interactions:
@@ -26,8 +30,10 @@ func _process(_delta: float) -> void:
 			interact_label.show()
 		else:
 			interact_label.hide()
-			#The code above deals with the interact labels, lines 24 - 28.
+			#The code above deals with the interact labels, lines 28 - 32.
 			#May need to change later when we add a progress bar to digging.
+	else:
+		interact_label.hide()
 
 func _sort_by_nearest(area1, area2):
 	var area1_dist = global_position.distance_to(area1.global_position)
@@ -35,8 +41,9 @@ func _sort_by_nearest(area1, area2):
 	return area1_dist < area2_dist
 	#This code is for allowing objects that are closer to be interacted with first.
 
-func _on_interact_range_area_exited(area: Area3D) -> void:
+func _on_interact_range_area_entered(area: Area3D) -> void:
 	current_interactions.push_back(area)
 
-func _on_interact_range_area_entered(area: Area3D) -> void:
+func _on_interact_range_area_exited(area: Area3D) -> void:
 	current_interactions.erase(area)
+

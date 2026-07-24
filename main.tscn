@@ -1,18 +1,36 @@
 [gd_scene format=3 uid="uid://cawxx7pjkpr1n"]
 
 [ext_resource type="PackedScene" uid="uid://cua0spqwrokoo" path="res://level.tscn" id="1_0xm2m"]
+[ext_resource type="Script" uid="uid://hffoopkciao1" path="res://main.gd" id="1_lquwl"]
 [ext_resource type="PackedScene" uid="uid://cl5ubspkypc0x" path="res://player.tscn" id="2_0xm2m"]
 [ext_resource type="PackedScene" uid="uid://b3b6j725j8kby" path="res://ritual_site.tscn" id="3_h2yge"]
+[ext_resource type="PackedScene" uid="uid://c4kumfgt4nymf" path="res://bone_grave.tscn" id="4_1bvp3"]
 
-[node name="Main" type="Node" unique_id=157006384]
+[node name="Main" type="Node" unique_id=157006384 groups=["main"]]
+script = ExtResource("1_lquwl")
+BoneGrave = ExtResource("4_1bvp3")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=431178783]
-transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, 0, 0, 0)
+transform = Transform3D(-0.8528684, -0.5132583, 0.0958181, -0.15038377, 0.41721186, 0.8962806, -0.49999997, 0.75, -0.43301263, 0, 87.3, 0)
+light_energy = 0.425
+light_indirect_energy = 2.275
+light_volumetric_fog_energy = 3.715
+light_angular_distance = 82.44
+light_specular = 0.0
 shadow_enabled = true
 
 [node name="Level" parent="." unique_id=234740822 instance=ExtResource("1_0xm2m")]
 
 [node name="Player" parent="." unique_id=1040764405 instance=ExtResource("2_0xm2m")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -14.900001)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -28)
 
 [node name="Ritual Site" parent="." unique_id=186982503 instance=ExtResource("3_h2yge")]
+
+[node name="SpawnPoint1" type="Marker3D" parent="." unique_id=2002642938]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -39.7, 0, -16.5)
+
+[node name="SpawnPoint2" type="Marker3D" parent="." unique_id=449227690]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 59.9, 0, 86.8)
+
+[node name="SpawnPoint3" type="Marker3D" parent="." unique_id=1285382582]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 52.4, 0, -26.900002)

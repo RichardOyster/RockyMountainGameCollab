@@ -23,9 +23,9 @@ func _input(event: InputEvent) -> void:
 		mouse_input.x += event.relative.x * mouse_sensitivity
 		mouse_input.y += event.relative.y * mouse_sensitivity
 
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	# Changed '-' to '+' to flip the vertical look direction
-	input_rotation.x = clampf(input_rotation.x + mouse_input.y, deg_to_rad(-90), deg_to_rad(85))
+	input_rotation.x = clampf(input_rotation.x + mouse_input.y, deg_to_rad(-30), deg_to_rad(50))
 	
 	# Horizontal look rotation
 	input_rotation.y -= mouse_input.x

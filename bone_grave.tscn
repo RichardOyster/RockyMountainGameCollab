@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://c4kumfgt4nymf"]
 
+[ext_resource type="Script" uid="uid://bx8nx8nhyckjo" path="res://bone_grave.gd" id="1_0odeh"]
 [ext_resource type="PackedScene" uid="uid://dn07hmhhnpbmc" path="res://interactable.tscn" id="1_xbo51"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_yf5fn"]
@@ -11,6 +12,7 @@ material = SubResource("StandardMaterial3D_yf5fn")
 [sub_resource type="SphereShape3D" id="SphereShape3D_g4v7s"]
 
 [node name="BoneGrave" type="Node3D" unique_id=1436268548]
+script = ExtResource("1_0odeh")
 
 [node name="Mound" type="StaticBody3D" parent="." unique_id=1139953854]
 
