@@ -3,33 +3,37 @@
 [ext_resource type="PackedScene" uid="uid://dn07hmhhnpbmc" path="res://interactable.tscn" id="1_5v5h3"]
 [ext_resource type="Script" uid="uid://bmanem070ofr8" path="res://ritual_site.gd" id="1_ojd04"]
 
-[sub_resource type="CylinderShape3D" id="CylinderShape3D_yf5fn"]
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_5v5h3"]
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_57qmd"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ojd04"]
+albedo_color = Color(0.85902625, 0, 0.15778854, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7604o"]
 albedo_color = Color(0.60694516, 0.08787369, 9.62615e-08, 1)
 
-[sub_resource type="TorusMesh" id="TorusMesh_yf5fn"]
-material = SubResource("StandardMaterial3D_57qmd")
+[sub_resource type="TorusMesh" id="TorusMesh_tl2ga"]
+material = SubResource("StandardMaterial3D_7604o")
 
-[sub_resource type="SphereShape3D" id="SphereShape3D_g4v7s"]
+[sub_resource type="SphereShape3D" id="SphereShape3D_xydlc"]
 
-[node name="Ritual Site" type="Node" unique_id=186982503]
+[node name="Ritual Site" type="Node3D" unique_id=2071506373]
 script = ExtResource("1_ojd04")
 
-[node name="Site" type="StaticBody3D" parent="." unique_id=1468183238]
+[node name="Site" type="StaticBody3D" parent="." unique_id=400080050]
 transform = Transform3D(12.370177, 0, 0, 0, 12.043471, 0, 0, 0, 13.267798, 0, 2.1, 0)
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Site" unique_id=380111633]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Site" unique_id=1186370995]
 transform = Transform3D(1.5080761, 0, 0, 0, 0.18254326, 0, 0, 0, 1.2841868, 0, 0, 0)
-shape = SubResource("CylinderShape3D_yf5fn")
+shape = SubResource("CylinderShape3D_5v5h3")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1876383201]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=482831093]
 transform = Transform3D(8.9065275, 0, 0, 0, 7.587387, 0, 0, 0, 8.358714, 0, 2.1, 0)
-mesh = SubResource("TorusMesh_yf5fn")
+material_override = SubResource("StandardMaterial3D_ojd04")
+mesh = SubResource("TorusMesh_tl2ga")
 
 [node name="Interactable" parent="." unique_id=416284619 instance=ExtResource("1_5v5h3")]
 interact_name = "Build Totem"
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Interactable" unique_id=747917660]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Interactable" unique_id=1400613328]
 transform = Transform3D(20.405003, 0, 0, 0, 14.688001, 0, 0, 0, 19.745604, 0, 0, 0)
-shape = SubResource("SphereShape3D_g4v7s")
+shape = SubResource("SphereShape3D_xydlc")

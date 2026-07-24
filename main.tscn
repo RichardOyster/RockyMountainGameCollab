@@ -3,12 +3,16 @@
 [ext_resource type="PackedScene" uid="uid://cua0spqwrokoo" path="res://level.tscn" id="1_0xm2m"]
 [ext_resource type="Script" uid="uid://hffoopkciao1" path="res://main.gd" id="1_lquwl"]
 [ext_resource type="PackedScene" uid="uid://cl5ubspkypc0x" path="res://player.tscn" id="2_0xm2m"]
+[ext_resource type="PackedScene" uid="uid://d00mvxqojrebh" path="res://ritual_site_2.tscn" id="3_272bh"]
 [ext_resource type="PackedScene" uid="uid://b3b6j725j8kby" path="res://ritual_site.tscn" id="3_h2yge"]
 [ext_resource type="PackedScene" uid="uid://c4kumfgt4nymf" path="res://bone_grave.tscn" id="4_1bvp3"]
+[ext_resource type="PackedScene" uid="uid://bcnovr1ej76nq" path="res://ritual_site_3.tscn" id="4_5vw27"]
 
 [node name="Main" type="Node" unique_id=157006384 groups=["main"]]
 script = ExtResource("1_lquwl")
 BoneGrave = ExtResource("4_1bvp3")
+ritual_site_2 = ExtResource("3_272bh")
+ritual_site_3 = ExtResource("4_5vw27")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=431178783]
 transform = Transform3D(-0.8528684, -0.5132583, 0.0958181, -0.15038377, 0.41721186, 0.8962806, -0.49999997, 0.75, -0.43301263, 0, 87.3, 0)
@@ -34,3 +38,30 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 59.9, 0, 86.8)
 
 [node name="SpawnPoint3" type="Marker3D" parent="." unique_id=1285382582]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 52.4, 0, -26.900002)
+
+[node name="SpawnPoint4" type="Marker3D" parent="." unique_id=171182371]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 40.4, 0, -113.5)
+
+[node name="SpawnPoint5" type="Marker3D" parent="." unique_id=1041864224]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -39.199997, 0, -87.8)
+
+[node name="SpawnPoint6" type="Marker3D" parent="." unique_id=1779562901]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -73.7, 0, 80.600006)
+
+[node name="SpawnPoint7" type="Marker3D" parent="." unique_id=948226050]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -19.599995, 0, 118.50001)
+
+[node name="SpawnPoint8" type="Marker3D" parent="." unique_id=302281586]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 116.90001, 0, 68.20001)
+
+[node name="SpawnPoint9" type="Marker3D" parent="." unique_id=1774388909]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 109.600006, 0, 118.10001)
+
+[node name="SpawnPoint10" type="Marker3D" parent="." unique_id=908228295]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -50.800003, 0, 35.90001)
+
+[node name="SpawnPoint11" type="Marker3D" parent="." unique_id=1914751098]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -101.100006, 0, 4.2000084)
+
+[node name="SpawnPoint12" type="Marker3D" parent="." unique_id=1753356760]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 82.2, 0, -17.999992)
